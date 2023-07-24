@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="flex">
+  <main>
+    <div class="container flex-column ">
+      <div class="title">
+        <img src="assets/images/logo.svg" alt="">
+      </div>
+      <div class="calculator flex rad-1 pad-3 rs">
+        <div class="inputs flex-column gap-5 pad-2 ">
+          <section class="bill">
+            <h6>Bill</h6>
+            <input type="text" name="textField" id="tfBill" placeholder="0" >
+          </section>
+          <section class="tip">
+            <h6>Select Tip %</h6>
+            <div class="options grid">
+              <button class="option">5%</button>
+              <button class="option">10%</button>
+              <button class="option">15%</button>
+              <button class="option">25%</button>
+              <button class="option">50%</button>
+              <input type="text" name="tfTipCustom" id="tfCustom" placeholder="Custom">
+            </div>
+          </section>
+          <section class="numOfPeople">
+            <div class="top flex sb">
+              <h6>Number of People</h6>
+              <h6 class="validate">Can't be zero</h6>
+            </div>
+            <input type="text" name="tfNumOfPeople" id="tfNumOfPeople" placeholder="0" class="" value="0">
+          </section>
+        </div>
+        <div class="result pad-4 grid">
+          <section class="tip-ammount flex sb">
+            <div class="label">
+              <h3>Tip Ammount</h3>
+              <p>/ person</p>
+            </div>
+            <div class="value">
+              <h1 class="total" >$<span id="res1">0.00</span> </h1>
+            </div>
+          </section>
+          
+          <section class="tip-total flex sb">
+            <div class="label">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <div class="value">
+              <h1 class="total">$<span id="res2">0.00</span></h1>
+            </div>
+          </section>
+          <section class="reset ">
+            <button id="reset-btn" class="res-btn">RESET</button>
+          </section>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  <script src="./js/Main.js"></script>
+</body>
+</html>

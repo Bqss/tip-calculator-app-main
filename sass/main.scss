@@ -1,0 +1,99 @@
+@use 'general' as g;
+main{
+    .container{
+        width: min(100%,920px);
+        margin: 0 auto;
+        
+        
+        .title{
+            color: g.$Verydarkcyan;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .calculator{
+            justify-content: space-between;
+            background-color: white;
+            & > *{
+                border-radius: 1em;
+                flex-grow: 0;
+            }
+            @media(max-width: 730px){
+                & > *{
+                    flex-grow: 1;
+                }
+            }
+            
+        }
+        .inputs{
+            flex-basis:  min(380px,45%);
+            section h6{
+                color: g.$Darkgrayishcyan;
+                margin-bottom: .5em;
+            }
+            .grid{
+                grid-template-columns: repeat(3,1fr);
+                gap: .4em;
+                input[type=text]{
+                    padding: .2em .3em;
+                    text-align: center;
+                    font-size: .9em;
+                }
+            }
+            .numOfPeople{
+                .top .validate{
+                    color: red;
+                    transition: opacity .2s;
+                    opacity: 0;
+                    &.nv{
+                        opacity: 1;
+                    }
+                }
+                input{
+                    transition: outline .2s;
+                   &.nv{
+                    outline: 2px solid red;
+                    color: red;
+                   }
+                }
+            }
+            @media(max-width : 730px){
+                margin-bottom: 1em;
+            }
+        }
+        .result{
+            flex-basis: min(415px,55%);
+            background: g.$Verydarkcyan;
+            color: g.$Verylightgrayishcyan;
+            font-size: .6em;
+            gap: 1em;
+            align-content: start;
+            
+            .total{
+                
+                font-size: 3em;
+                color: g.$Strongcyan;
+            }
+            .reset{
+                
+                margin-top: 9em;
+
+                .res-btn{
+                    color: black;
+                    background-color: #26c2ad;
+                    width: 100%;
+                    font-size: 1.3em;
+                    padding: .5em 0;
+                    border-radius: .3em;
+                    &:hover{
+                        background-color: #a1e7df;
+                    }
+
+                }
+                @media(max-width : 730px){
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
+    
+}
